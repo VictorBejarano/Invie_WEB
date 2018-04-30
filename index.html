@@ -5,7 +5,7 @@
     <title>Invie - tus mejores guitarras!!</title><!-- titulo del sitio web del tab del navegador -->
   </head>
   <body><!-- contenido del sitio web -->
-    <header><!-- cabecera -->
+    <header id="header"><!-- cabecera (id no se puede repetir) -->
       <figure><!-- logotipo -->
         <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
         <!-- en alt sale cuando la imagen no carga -->
@@ -13,22 +13,26 @@
       <nav><!-- menu -->
         <ul><!--unorden list - lista sin numeracion -->
           <li><!-- list item -->
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <!-- Anchor para hipervinculo  -->
           </li>
           <li><!-- list item -->
-            <a href="#">Precios</a>
+            <a href="#guitarras">Guitarras</a>
+            <!-- Anchor para hipervinculo  -->
+          </li>
+          <li><!-- list item -->
+            <a href="precios.html">Precios</a>
             <!-- Anchor para hipervinculo  -->
           </li>
         </ul>
       </nav>
     </header>
-    <section><!-- seccion para la portada -->
+    <section id="portada"><!-- seccion para la portada -->
       <h1>Guitarras inviesibles</h1><!-- h1 se debe usar solo una vez por pagina es importante para los navegadores (titulo) -->
       <h3>Sé la estrella de rock que siempre quisiste ser</h3><!-- resumen (hasta h6) -->
       <button type="button" name="button">Conoce más</button><!-- boton -->
     </section>
-    <section><!-- guitarras -->
+    <section id="guitarras"><!-- guitarras -->
       <h2>Nuestras guitarras</h2><!-- titulo -->
       <article class=""><!-- para poner pedazos muy especifico ej blog (guitarra 1) -->
         <img src="images/invie-acustica.png" alt="Guitarra Invie Acustica" width="200"/>
