@@ -19,11 +19,20 @@ selector de id
 #guitarra{
 }
 */
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Allerta', sans-serif;
+*/
+body{
+  font-family: 'Allerta', sans-serif;/*configura el tipo de fuente*/
+}
 .titulo{
   font-size: 70px;/*Tamaño de la fuente*/
+  font-family: 'Montserrat', sans-serif;
 }
 .title-a{
   font-size: 24px;
+
 }
 .title-b{
   font-size: 50px;
@@ -33,6 +42,7 @@ selector de id
 }
 .guitarras h2{
   font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
 }
 .portada{
   background-image: url('../images/background.png'); /*Imagenes de fondo*/
