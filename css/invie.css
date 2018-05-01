@@ -23,6 +23,11 @@ selector de id
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Allerta', sans-serif;
 */
+*{
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid red;
+}
 body{
   font-family: 'Allerta', sans-serif;/*configura el tipo de fuente*/
 }
