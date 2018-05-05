@@ -75,9 +75,39 @@
             <span>contacto@invie.com</span>
           </a>
         </div>
-        <div class="formulario">
-          formulario
-        </div>
+        <form class="formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" required id="nombre" name="nombre"/>
+          <label for="email">E-mail</label>
+          <input type="email" required id="email" name="email"/><!-- required evita que se introduzca otro tipo de texto -->
+          <div class="sexo">
+            <label for="mujer">
+              <input type="radio" id="mujer" name="sexo" value="mujer">Mujer
+            </label>
+            <label for="hombre">
+              <input type="radio" id="hombre" name="sexo" value="hombre">Hombre<!-- name es para solo seleccionar un solo dato -->
+            </label>
+          </div>
+          <div class="intereses">
+            <label for="cotizacion">
+              <input type="checkbox" id="cotizacion" name="intereses" value="cotizacion">Cotización
+            </label>
+            <label for="reclamos">
+              <input type="checkbox" id="reclamos" name="intereses" value="reclamos">Reclamos
+            </label>
+            <label for="comentarios">
+              <input type="checkbox" id="comentarios" name="intereses" value="comentarios">Comentarios
+            </label>
+            <label for="otros">
+              <input type="checkbox" id="otros" name="intereses" value="otros">Otros
+            </label>
+          </div>
+          <div class="">
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios" rows="7" cols="30"></textarea>
+            <input type="submit" value="Enviar"/>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
