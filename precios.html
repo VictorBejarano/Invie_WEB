@@ -1,0 +1,84 @@
+<!DOCTYPE html><!-- Sirve para identificar si es html5 -->
+<html lang="en" dir="ltr"><!-- Pagina Web Invie -->
+  <head>
+    <meta charset="utf-8">
+    <title>Precios de tus mejores guitarras!!</title><!-- titulo del sitio web del tab del navegador -->
+    <!-- https://fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet" type="text/css"/><!-- Carga dos tipos de fuentes al aplicarle | optimiza la pagina WEB -->
+    <link rel="stylesheet" href="css/invie.css"/>
+  </head>
+  <body>
+    <header id="header" class="header contenedor"><!-- cabecera (id no se puede repetir) -->
+      <figure class="logotipo"><!-- logotipo -->
+        <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+        <!-- en alt sale cuando la imagen no carga -->
+      </figure>
+      <nav class="menu"><!-- menu -->
+        <ul><!--unorden list - lista sin numeracion -->
+          <li><!-- list item -->
+            <a href="index.html">Home</a>
+            <!-- Anchor para hipervinculo  -->
+          </li>
+          <li><!-- list item -->
+            <a href="index.html#guitarras">Guitarras</a>
+            <!-- Anchor para hipervinculo  -->
+          </li>
+          <li><!-- list item -->
+            <a href="precios.html">Precios</a>
+            <!-- Anchor para hipervinculo  -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="contacto">
+          <img src="images/invie-white.png" alt="logotipo blanco"/>
+          <a href="tel:+573024456678"><!-- se encarga de decir al navegador que es num telefono para que invoque el aplicativo adecuado -->
+            <strong>Teléfono</strong><!-- negrita -->
+            <span>3024456678</span><!-- no tiene uso significativo semantico, es para agrupar -->
+          </a>
+          <a href="mailto:contacto@invie.com">
+            <strong>E-mail</strong>
+            <span>contacto@invie.com</span>
+          </a>
+        </div>
+        <form class="formulario">
+          <div class="col1">
+            <label for="nombre">Nombre</label>
+            <input type="text" required id="nombre" name="nombre"/>
+            <label for="email">E-mail</label>
+            <input type="email" required id="email" name="email"/><!-- required evita que se introduzca otro tipo de texto -->
+            <div class="sexo">
+              <label for="mujer">
+                <input type="radio" checked id="mujer" name="sexo" value="mujer">Mujer
+              </label>
+              <label for="hombre">
+                <input type="radio" id="hombre" name="sexo" value="hombre">Hombre<!-- name es para solo seleccionar un solo dato -->
+              </label>
+            </div>
+            <div class="intereses">
+              <label for="cotizacion">
+                <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion">Cotización
+              </label>
+              <label for="reclamos">
+                <input type="checkbox" id="reclamos" name="intereses" value="reclamos">Reclamos
+              </label>
+              <label for="comentarios">
+                <input type="checkbox" id="comentarios" name="intereses" value="comentarios">Comentarios
+              </label>
+              <label for="otros">
+                <input type="checkbox" id="otros" name="intereses" value="otros">Otros
+              </label>
+            </div>
+          </div>
+          <div class="col2">
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios" rows="7" cols="30"></textarea>
+            <input type="submit" value="Enviar" class="button"/>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
