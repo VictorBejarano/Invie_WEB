@@ -32,6 +32,32 @@ body{
   font-family: 'Allerta', sans-serif;/*configura el tipo de fuente*/
   margin: 0;
 }
+table{
+  width: 100%;
+}
+th{
+  background: #273B47;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+}
+td{
+  padding: 20px;
+}
+table, td, th{
+  border: 1px solid #273B47;
+  border-collapse: collapse;
+}
+input, textarea{/* para que no resalten los inputs */
+  outline: 0;
+}
+input:focus, textarea:focus{/* oscurece el fondo de los input */
+  background: lightgray;
+}
+.contenedor{
+  width: 800px;
+  margin: auto;  /* se va posicionar de manera centrada */
+}
 .button{
   border-radius: 12px;
   border: none;
@@ -62,6 +88,8 @@ body{
 }
 .guitarras{
   color: #1F313C;
+  margin-bottom: 60px;
+   /* !important; */
 }
 .guitarras h2{
   font-size: 35px;
@@ -101,12 +129,8 @@ body{
   display: inline-block;
   margin-left: 0;
 }
-.contenedor{
-  width: 800px;
-  margin: auto;  /* se va posicionar de manera centrada */
-}
 .guitarra{
-  margin: 10px;
+  margin: 10px 10px 40px 10px;
   padding: 10px;
   /* overflow: hidden; */
   border: 1px solid #1F313C;
@@ -114,6 +138,9 @@ body{
 }
 .guitarra ol{
   padding: 0px;
+}
+.guitarra.b{
+  height: 190px;
 }
 .derecha{
   float: right;
@@ -123,7 +150,7 @@ body{
 .izquierda{
   float: left;
   position: relative;
-  top: 80px;
+  /* top: 80px; */
 }
 .contenedor-guitarra-a{
   padding-left: 20px;
@@ -131,13 +158,14 @@ body{
 .contenedor-guitarra-b{
   margin-left: 370px;
   position: relative;
-  bottom: 100px;
+  bottom: 90px;
 }
 .header{
   position: relative;
 }
 .footer{
   background: #273B47;
+  padding: 50px 10px;
 }
 .contacto{
   display: flex;
@@ -164,7 +192,7 @@ body{
   display: flex;
   width: 400px;
   color: white;
-  padding: 50px 10px;
+  /* padding: 50px 10px; */
 }
 .col1, .col2{
   display: flex;
@@ -176,6 +204,9 @@ body{
 .col2{
   align-items: flex-start;
 }
+.col2 .button{
+  margin-top: 15px;
+}
 .intereses label{
   font-size: 12px;
 }
@@ -184,21 +215,4 @@ body{
 }
 .sexo{
   margin-top: 10px;
-}
-table{
-  width: 100%;
-}
-th{
-  background: #273B47;
-  color: white;
-  padding: 10px 20px;
-  text-align: left;
-}
-td{
-  padding: 20px;
-}
-/* Hola como estas */
-table, td, th{
-  border: 1px solid #273B47;
-  border-collapse: collapse;
 }
