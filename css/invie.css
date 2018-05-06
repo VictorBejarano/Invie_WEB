@@ -224,3 +224,10 @@ input:focus, textarea:focus{/* oscurece el fondo de los input */
 .tabla{
   margin: 50px 0;
 }
+@media screen and (max-width:800px)
+{
+  body{
+    background: peru;
+    border: 15px solid lightblue;
+  }
+}
