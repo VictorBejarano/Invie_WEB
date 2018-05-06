@@ -78,6 +78,11 @@ body{
   display: inline-block;
   margin-left: 30px;
 }
+.menu li:before{/* no va indexar mal por los simbolos */
+  content: '∘';
+  font-size: 25px;
+  /* line-height: 10px; */
+}
 .logotipo{
   display: inline-block;
 }
