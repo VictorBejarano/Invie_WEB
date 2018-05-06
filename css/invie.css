@@ -33,17 +33,24 @@ body{
   margin: 0;
 }
 .button{
-  border-radius: 5px;
+  border-radius: 12px;
   border: none;
   background: #FD324E;
   color: white;
-  padding: 7px;
+  padding: 7px 12px;
+  cursor: pointer;/* Cada vez que el mouse pase por el boton el icono del cursor cambia a una mano */
+  text-decoration: none;
+  font-size: 18px;
+  background: linear-gradient(to left,#FE344E,#FF7250);
 }
 .titulo{
   font-size: 70px;/*Tamaño de la fuente*/
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 0;
   margin-top:
+}
+.titulo span{
+  text-decoration: underline;/* subraya ciertas letras */
 }
 .title-a{
   font-size: 24px;
@@ -62,8 +69,10 @@ body{
 }
 .portada{
   background-image: url('../images/background.png'); /*Imagenes de fondo*/
+  background-size: cover;/* ajusta la imagen todo el tamaño disponible */
   color: white;/*Todos las fuentes hijas heredan fuente blanca*/
   padding: 20px;
+  height: 500px;
 }
 .portada button{
   margin-bottom: 70px;
@@ -82,9 +91,15 @@ body{
   content: '∘';
   font-size: 25px;
   /* line-height: 10px; */
+  color: white;
+}
+.menu a{
+  color: white;
+  text-decoration: none;/* quita el subrayado */
 }
 .logotipo{
   display: inline-block;
+  margin-left: 0;
 }
 .contenedor{
   width: 800px;
@@ -115,6 +130,8 @@ body{
 }
 .contenedor-guitarra-b{
   margin-left: 370px;
+  position: relative;
+  bottom: 100px;
 }
 .header{
   position: relative;

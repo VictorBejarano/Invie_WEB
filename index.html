@@ -8,33 +8,33 @@
     <link rel="stylesheet" href="css/invie.css"/>
   </head>
   <body><!-- contenido del sitio web -->
-    <header id="header" class="header contenedor"><!-- cabecera (id no se puede repetir) -->
-      <figure class="logotipo"><!-- logotipo -->
-        <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
-        <!-- en alt sale cuando la imagen no carga -->
-      </figure>
-      <nav class="menu"><!-- menu -->
-        <ul><!--unorden list - lista sin numeracion -->
-          <li><!-- list item -->
-            <a href="index.html">Home</a>
-            <!-- Anchor para hipervinculo  -->
-          </li>
-          <li><!-- list item -->
-            <a href="#guitarras">Guitarras</a>
-            <!-- Anchor para hipervinculo  -->
-          </li>
-          <li><!-- list item -->
-            <a href="precios.html">Precios</a>
-            <!-- Anchor para hipervinculo  -->
-          </li>
-        </ul>
-      </nav>
-    </header>
     <section id="portada" class="portada"><!-- seccion para la portada -->
+      <header id="header" class="header contenedor"><!-- cabecera (id no se puede repetir) -->
+        <figure class="logotipo"><!-- logotipo -->
+          <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+          <!-- en alt sale cuando la imagen no carga -->
+        </figure>
+        <nav class="menu"><!-- menu -->
+          <ul><!--unorden list - lista sin numeracion -->
+            <li><!-- list item -->
+              <a href="index.html">Home</a>
+              <!-- Anchor para hipervinculo  -->
+            </li>
+            <li><!-- list item -->
+              <a href="#guitarras">Guitarras</a>
+              <!-- Anchor para hipervinculo  -->
+            </li>
+            <li><!-- list item -->
+              <a href="precios.html">Precios</a>
+              <!-- Anchor para hipervinculo  -->
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div class="contenedor"><!-- No le añade valor semantico al html, solo genera una "caja" -->
-        <h1 class="titulo">Guitarras inviesibles</h1><!-- h1 se debe usar solo una vez por pagina es importante para los navegadores (titulo) -->
+        <h1 class="titulo">Guitarras <span>invie</span>sibles</h1><!-- h1 se debe usar solo una vez por pagina es importante para los navegadores (titulo) -->
         <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3><!-- resumen (hasta h6) -->
-        <button type="button" name="button" class="button">Conoce más</button><!-- boton -->
+        <a class="button" href="#guitarras">Conoce más</a><!-- boton -->
       </div>
     </section>
     <section id="guitarras" class="guitarras contenedor"><!-- guitarras -->
