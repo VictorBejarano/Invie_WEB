@@ -57,6 +57,11 @@ input:focus, textarea:focus{/* oscurece el fondo de los input */
 .contenedor{
   width: 800px;
   margin: auto;  /* se va posicionar de manera centrada */
+  position: relative;
+}
+.background{
+  background-image: url('../images/background.png');
+  background-size: cover;
 }
 .button{
   border-radius: 12px;
@@ -215,4 +220,7 @@ input:focus, textarea:focus{/* oscurece el fondo de los input */
 }
 .sexo{
   margin-top: 10px;
+}
+.tabla{
+  margin: 50px 0;
 }
