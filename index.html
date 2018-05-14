@@ -6,15 +6,18 @@
     <!-- https://fonts.google.com -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet" type="text/css"/><!-- Carga dos tipos de fuentes al aplicarle | optimiza la pagina WEB -->
     <link rel="stylesheet" href="css/invie.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/><!-- aqui le dice que tenga el tamaño del dispositivo user-scalable desactiva el zoom-->
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"> -->
   </head>
   <body><!-- contenido del sitio web -->
     <section id="portada" class="portada background"><!-- seccion para la portada -->
       <header id="header" class="header contenedor"><!-- cabecera (id no se puede repetir) -->
         <figure class="logotipo"><!-- logotipo -->
-          <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+          <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo"/>
           <!-- en alt sale cuando la imagen no carga -->
         </figure>
-        <nav class="menu"><!-- menu -->
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
+        <nav class="menu" id="menu"><!-- menu -->
           <ul><!--unorden list - lista sin numeracion -->
             <li><!-- list item -->
               <a href="index.html">Home</a>
@@ -39,8 +42,16 @@
     </section>
     <section id="guitarras" class="guitarras contenedor"><!-- guitarras -->
       <h2>Nuestras guitarras</h2><!-- titulo -->
+      <div class="video-demo-contenedor">
+        <div class="video-demo">
+          <div class="video-responsive-contenedor ">
+            <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- <video src="video/320x240.ogg"></video> -->
       <article class="guitarra"><!-- para poner pedazos muy especifico ej blog (guitarra 1) -->
-        <img class="derecha" src="images/invie-acustica.png" alt="Guitarra Invie Acustica" width="350"/>
+        <img class="derecha" data-src="images/invie-acustica.png|images/invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350"/>
         <div class="contenedor-guitarra-a">
           <h3 class="title-b">Invie Acustica</h3>
           <ol><!-- ordened list lista con numeracion -->
@@ -51,7 +62,7 @@
         </div>
       </article>
       <article class="guitarra b"><!-- guitarra 2 -->
-        <img class="izquierda" src="images/invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
+        <img class="izquierda" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra Invie Classic" width="350"/>
         <div class="contenedor-guitarra-b">
           <h3 class="title-b">Invie Classic</h3>
           <ol><!-- ordened list lista con numeracion -->
@@ -65,7 +76,7 @@
     <footer class="footer">
       <div class="contenedor">
         <div class="contacto">
-          <img src="images/invie-white.png" alt="logotipo blanco"/>
+          <img data-src="images/invie-white.png|images/invie-white2x.png" alt="logotipo blanco"/>
           <a href="tel:+573024456678"><!-- se encarga de decir al navegador que es num telefono para que invoque el aplicativo adecuado -->
             <strong>Teléfono</strong><!-- negrita -->
             <span>3024456678</span><!-- no tiene uso significativo semantico, es para agrupar -->
@@ -112,5 +123,41 @@
         </form>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script type="text/javascript">
+      var consulta = window.matchMedia('(max-width:500px)');
+      consulta.addListener(mediaQuery);
+      var $burguerButton = document.getElementById('burguer-button');// cambelet... Busca el id correspondiente
+      var $menu = document.getElementById('menu');
+      function toggleMenu(){
+        $menu.classList.toggle('active')
+      };
+      function showMenu(){
+        $menu.classList.add('active');
+      };
+      function hideMenu(){
+        $menu.classList.remove('active');
+      };
+      function mediaQuery() {
+        if(consulta.matches){
+          console.log('se cumplio');
+          $burguerButton.addEventListener('touchstart', toggleMenu);
+        }else{
+          $burguerButton.removeEventListener('touchstart', toggleMenu);
+          console.log('No se cumplio');
+        }
+      }
+      mediaQuery();
+      var bLazy = new Blazy({
+        // optimiza la carga de imagenes solo cargando la imagen en pantalla
+        selector: 'img'
+      });
+      // Gestos touch
+      var $body = document.body;
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
+    </script>
   </body>
 </html>
