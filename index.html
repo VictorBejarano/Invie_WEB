@@ -13,7 +13,7 @@
     <section id="portada" class="portada background"><!-- seccion para la portada -->
       <header id="header" class="header contenedor"><!-- cabecera (id no se puede repetir) -->
         <figure class="logotipo"><!-- logotipo -->
-          <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+          <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo"/>
           <!-- en alt sale cuando la imagen no carga -->
         </figure>
         <span class="burguer-button icon-menu" id="burguer-button"></span>
@@ -45,10 +45,9 @@
       <div class="video-responsive-contenedor">
         <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-
       <video src="video/320x240.ogg"></video>
       <article class="guitarra"><!-- para poner pedazos muy especifico ej blog (guitarra 1) -->
-        <img class="derecha" data-src="images/invie-acustica.png" alt="Guitarra Invie Acustica" width="350"/>
+        <img class="derecha" data-src="images/invie-acustica.png|images/invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350"/>
         <div class="contenedor-guitarra-a">
           <h3 class="title-b">Invie Acustica</h3>
           <ol><!-- ordened list lista con numeracion -->
@@ -59,7 +58,7 @@
         </div>
       </article>
       <article class="guitarra b"><!-- guitarra 2 -->
-        <img class="izquierda" data-src="images/invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
+        <img class="izquierda" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra Invie Classic" width="350"/>
         <div class="contenedor-guitarra-b">
           <h3 class="title-b">Invie Classic</h3>
           <ol><!-- ordened list lista con numeracion -->
@@ -73,7 +72,7 @@
     <footer class="footer">
       <div class="contenedor">
         <div class="contacto">
-          <img data-src="images/invie-white.png" alt="logotipo blanco"/>
+          <img data-src="images/invie-white.png|images/invie-white2x.png" alt="logotipo blanco"/>
           <a href="tel:+573024456678"><!-- se encarga de decir al navegador que es num telefono para que invoque el aplicativo adecuado -->
             <strong>Teléfono</strong><!-- negrita -->
             <span>3024456678</span><!-- no tiene uso significativo semantico, es para agrupar -->
