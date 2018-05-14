@@ -276,6 +276,7 @@ input:focus, textarea:focus{/* oscurece el fondo de los input */
   position: absolute;
   left: 20px;
   top: 20px;
+  color: white;
   z-index: 3;
 }
 @media screen and (max-width:800px)
@@ -287,6 +288,15 @@ input:focus, textarea:focus{/* oscurece el fondo de los input */
     /* body{
       border: 10px solid red;
     } */
+    /* Precios */
+    .tabla{
+      margin: 50px 20px;
+    }
+    .tabla .contenedor{
+      overflow: auto;
+      border: 1px solid #273b47;
+    }
+    /* Precios */
     /* Portada */
     .titulo{
       font-size: 45px;
@@ -386,6 +396,12 @@ input:focus, textarea:focus{/* oscurece el fondo de los input */
 @media screen and (max-width: 500px) {
   /* Portada */
   .portada .contenedor{
+    position: static;
+  }
+  .header{
+    position: static;
+  }
+  .header .contenedor{
     position: static;
   }
   .menu{
